@@ -1,0 +1,86 @@
+* {
+	font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.bodyback {
+	background-color: #090909;
+}
+
+.modalContainer {
+	background: #090909;
+	border: 2px solid #fff;
+}
+
+.headName {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.editUserInput {
+	vertical-align: middle;
+	padding-bottom: 20px;
+	text-align: center;
+
+	& .power::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+    	margin: 0;
+	}
+
+	& span {
+		vertical-align: middle;
+		color: #fff;
+		font-size: 24px;
+		font-weight: 200;
+		margin-right: 10px;
+	}
+
+	& input {
+		width: 250px;
+		text-align: center;
+		font-weight: 300;
+		color: #fff;
+		vertical-align: middle;
+		padding: 5px 5px;
+		outline: none;
+		border: 1px solid #fff;
+		background: none;
+	}
+
+	& select {
+		text-transform: uppercase;
+		width: 250px;
+		text-align: center;
+		font-weight: 300;
+		color: #fff;
+		vertical-align: middle;
+		padding: 5px 5px;
+		outline: none;
+		border: 1px solid #fff;
+		background: none;
+
+		&:focus {
+			background: #090909;
+		}
+	}
+}
+
+.modalButton {
+	margin-top: 20px;
+	padding: 10px 50px;
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+	text-transform: uppercase;
+	outline: none;
+	border: 2px solid #fff;
+	background: none;
+
+	&:hover {background-color: #fff; color: #000; transition: .3s; transform: scale(1.1);}
+
+	&:active {transform: scale(1.0);}
+}
+

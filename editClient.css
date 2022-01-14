@@ -1,0 +1,88 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.bodyback {
+  background-color: #090909;
+}
+
+.modalContainer {
+  background: #090909;
+  border: 2px solid #fff;
+}
+
+.headName {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.editUserInput {
+  vertical-align: middle;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.editUserInput .power::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.editUserInput span {
+  vertical-align: middle;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+.editUserInput input {
+  width: 250px;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  vertical-align: middle;
+  padding: 5px 5px;
+  outline: none;
+  border: 1px solid #fff;
+  background: none;
+}
+.editUserInput select {
+  text-transform: uppercase;
+  width: 250px;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  vertical-align: middle;
+  padding: 5px 5px;
+  outline: none;
+  border: 1px solid #fff;
+  background: none;
+}
+.editUserInput select:focus {
+  background: #090909;
+}
+
+.modalButton {
+  margin-top: 20px;
+  padding: 10px 50px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  border: 2px solid #fff;
+  background: none;
+}
+.modalButton:hover {
+  background-color: #fff;
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.modalButton:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
