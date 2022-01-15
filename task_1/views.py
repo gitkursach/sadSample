@@ -8,7 +8,6 @@ from django.views import View
 from .models import *
 
 
-
 def pageNotFound(request, exception):
     return HttpResponseNotFound("<h1>Страница не найдена</h1>")
 
@@ -24,7 +23,7 @@ class HomePage(View):
         return render(request, 'task_1/index.html', context=context)
 
     def post(self, request):
-        get_first_name = request.POST.get('first_name')
+
 
         context = {
             'title': "Главная",
@@ -33,46 +32,6 @@ class HomePage(View):
 
 
 def edit_line(request, pk):
-    # get_email = request.POST.get('email')
-    # get_motor = request.POST.get('motor')
-    # get_date_birth = request.POST.get('date_birth')
-    # get_brand = request.POST.get('brand')
-    # get_appointments = request.POST.getlist('appointment')
-    # get_providers = request.POST.getlist('provider')
-    #
-    # print(get_email, get_motor, get_date_birth, get_brand, get_appointments, get_providers)
-    #
-    # edit_auto = AutoShow.objects.get(pk=pk)
-    # edit_auto.email = get_email
-    # edit_auto.motor = get_motor
-    # edit_auto.date_birth = get_date_birth
-    # edit_auto.brand = get_brand
-    # edit_auto.save()
-    #
-    # edit_appoints = Appointment.objects.filter(appointment=pk)
-    # if len(edit_appoints) < len(get_appointments):
-    #     delete_appointments = Appointment.objects.filter(appointment=pk)
-    #     for delete_appointment in delete_appointments:
-    #         delete_appointment.delete()
-    #     for get_appointment in get_appointments:
-    #         save_appointment = Appointment(appointment=edit_auto, title_appoint=get_appointment)
-    #         save_appointment.save()
-    # elif len(edit_appoints) == len(get_appointments):
-    #     print('good')
-    #     for get_appointment, edit_appoint in get_appointments:
-    #             edit_appoint.title_appoint = get_appointment
-    #             edit_appoint.save()
-    #
-    #
-    #     # for get_provider in get_providers:
-    #     #     edit_providers = Provider.objects.filter(provider=pk)
-    #     #     for edit_provider in edit_providers:
-    #     #         edit_provider.title_appoint = get_provider
-    #     #         edit_provider.save()
-    #
-    #
-    #
-    # return HttpResponseRedirect(reverse_lazy("home"))
     get_email = request.POST.get('email')
     get_motor = request.POST.get('motor')
     get_date_birth = request.POST.get('date_birth')
@@ -92,7 +51,6 @@ def edit_line(request, pk):
     return HttpResponseRedirect(reverse_lazy("home"))
 
 
-
 def add_line(request):
     print("add_line_v2  ", request.POST)
     get_email = request.POST.get('email')
@@ -108,7 +66,13 @@ def add_line(request):
 
     return HttpResponseRedirect(reverse_lazy("home"))
 
+
 def delete_line(request, pk):
     delete_line = AutoShow_v2.objects.get(pk=pk)
     delete_line.delete()
+    return HttpResponseRedirect(reverse_lazy("home"))
+
+def delete_all(request):
+    delete_all = AutoShow_v2.objects.all()
+    delete_all.delete()
     return HttpResponseRedirect(reverse_lazy("home"))
